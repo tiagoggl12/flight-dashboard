@@ -30,7 +30,7 @@ def load_data():
     df_list = []
     for f in all_files:
         try:
-            with open(f, 'r', encoding='utf-8') as file:
+            with open(f, 'r', encoding='utf-8-sig') as file:
                 data = json.load(file)
                 # JSON data might be a list of dicts
                 if isinstance(data, list):
